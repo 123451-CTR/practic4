@@ -1,0 +1,9 @@
+{
+  "name": "shop",
+  "scripts": {
+    "setup": "npm i --prefix backend && npm i --prefix frontend && npm run seed --prefix backend",
+    "dev": "concurrently -n API,WEB -c cyan,magenta \"npm start --prefix backend\" \"npm start --prefix frontend\"",
+    "start": "npm run dev"
+  },
+  "devDependencies": { "concurrently": "^9.0.0" }
+}
